@@ -13,3 +13,6 @@ import "tailwindcss/utilities.css"
 // Markdown formatting, uses Tailwind @apply primitive to apply Tailwind's utility classes to
 // elements created by the Markdown parser
 import "./src/markdown.css"
+
+// Set theme for Prism code highlighting
+require("prismjs/themes/prism-tomorrow.css")
