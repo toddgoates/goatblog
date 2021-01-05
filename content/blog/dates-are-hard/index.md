@@ -44,7 +44,13 @@ The code for this application is rather complex and written in a way that isn't 
 
 Well, sort of...
 
-In PHP, when using the `date()` function, you can get the current week's number like this: `date('W')`. If you run that on the last week of the month, there's a good chance you'll get back a 53. This depends on which day January 1st falls on for the current year.
+In PHP, when using the `date()` function, you can get the current week's number like this:
+
+```php
+date('W');
+```
+
+If you run that on the final week of the year, there's a good chance you'll get back a 53. This depends on which day January 1st falls on for the current year.
 
 Someone that had previously worked on the timesheet functionality had hard-coded a 52. We had to refactor that code to dynamically check the week number and see if it was a 52 or 53, then go from there. In short, there are 52 weeks in a year, but the week number for the final week can be 52 or 53.
 
